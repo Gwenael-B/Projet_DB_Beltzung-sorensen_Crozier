@@ -1,0 +1,54 @@
+Tu travailles dans le domaine de la course à pied. Ton entreprise a comme activité la vente de chaussures de course. C’est une entreprise comme asics, adidas, on, etc... Prends les données
+sur les sites spécialisés et les vendeurs de chaussures de course. Inspire-toi The Running Collective qui est un comparateur de chaussures. Par contre, il ne doit y avoir que les 
+informations sur les chaussures, pas d'information sur les clients car c'est une base de donnée sur les différentes chaussures de course. Ton entreprise veut appliquer MERISE pour 
+concevoir un système d'information. Tu es chargé de la partie analyse, c’est-à-dire de collecter les besoins auprès de l’entreprise. Elle a fait appel à un étudiant en ingénierie 
+informatique pour réaliser ce projet, tu dois lui fournir les informations nécessaires pour qu’il applique ensuite lui-même les étapes suivantes de conception et développement de la base de
+données. D’abord, établis les règles de gestions des données de ton entreprise, sous la forme d'une liste à puce. Elle doit correspondre aux informations que fournit quelqu’un qui connaît le
+fonctionnement de l’entreprise, mais pas comment se construit un système d’information. Ensuite, à partir de ces règles, fournis un dictionnaire de données brutes avec les colonnes suivantes,
+regroupées dans un tableau : signification de la donnée, type, taille en nombre de caractères ou de chiffres. Il doit y avoir entre 25 et 35 données. Il sert à fournir des informations 
+supplémentaires sur chaque donnée (taille et type) mais sans a priori sur comment les données vont être modélisées ensuite. Fournis donc les règles de gestion et le dictionnaire de données.
+
+1. Règles de gestion des données
+Ces règles décrivent le fonctionnement métier de notre catalogue de chaussures. Elles permettront à l'étudiant d'identifier les entités et les relations (par exemple, ce qui est une simple
+caractéristique et ce qui mérite une table séparée).
+Identité de marque : Chaque chaussure appartient à une marque unique (ex : Saucony, Hoka). Une marque est définie par son nom et son origine.
+Hiérarchie des modèles : Un modèle (ex : "Clifton") peut exister en plusieurs versions successives au fil des années (ex : Clifton 8, Clifton 9). Chaque version est un produit distinct.
+Segmentation par sexe : Un même modèle de chaussure est généralement décliné en version Homme, Femme ou Unisexe, ce qui peut influencer le poids et les coloris.
+Géométrie de la semelle : On doit connaître précisément la hauteur de la semelle au talon et à l'avant-pied pour calculer automatiquement le "drop" (la différence de hauteur).
+Usage et Terrain : Une chaussure est conçue pour un terrain principal (Route, Trail, Piste, Chemin) et pour une plage de distance idéale (Sprint, Courte distance, Marathon, Ultra).
+Spécificités techniques : Nous suivons les composants critiques comme le nom de la mousse d'amorti (ex : FlyteFoam) et la présence ou non d'une plaque de propulsion (Carbone, Nylon, TPU).
+Dynamisme et Foulée : Chaque chaussure est classée selon le type de foulée qu'elle supporte (Neutre, Pronatrice ou Supinatrice).
+Accroche (Trail) : Pour les modèles de trail, nous précisons la profondeur des crampons en millimètres.
+Prix et Disponibilité : Nous enregistrons le prix de vente conseillé (PVC) à la sortie du modèle pour permettre des comparaisons de prix ultérieures.
+Éco-conception : L'entreprise souhaite afficher le pourcentage de matériaux recyclés utilisés dans la fabrication de la tige ou de la semelle.
+
+2. Dictionnaire de données brutes
+Voici la liste des données à intégrer dans le système. Ce dictionnaire servira de base pour définir les attributs des futures tables de la base de données.
+Nom de la marque,Texte,50
+Nom du modèle,Texte,100
+"Numéro de version (ex: 12, v3)",Texte,10
+Année de commercialisation,Entier,4
+"Sexe cible (H, F, U)",Texte,1
+Poids de la chaussure (en grammes),Entier,3
+Hauteur de semelle Talon (en mm),Entier,2
+Hauteur de semelle Avant-pied (en mm),Entier,2
+"Valeur du Drop (calculé, en mm)",Entier,2
+"Type de terrain (ex: Route, Trail)",Texte,20
+Distance de prédilection,Texte,30
+Type de foulée (ex: Neutre),Texte,20
+Nom de la mousse amortissante,Texte,50
+Présence d'une plaque (Oui/Non),Booléen,1
+Matériau de la plaque (ex: Carbone),Texte,30
+Profondeur des crampons (en mm),Décimal,"2,1"
+"Type d'empeigne (Mesh, Knit, etc.)",Texte,50
+"Type de laçage (Classique, Quicklace, BOA)",Texte,20
+Prix de vente conseillé (€),Décimal,"6,2"
+Rigidité de la chaussure (échelle 1 à 5),Entier,1
+Niveau d'amorti (échelle 1 à 5),Entier,1
+Stabilité latérale (échelle 1 à 5),Entier,1
+"Largeur du chaussant (D, 2E, 4E)",Texte,5
+Coloris principal,Texte,30
+Pourcentage de matériaux recyclés,Entier,3
+Présence de membrane imperméable (ex: GTX),Booléen,1
+Nom de la technologie de semelle extérieure,Texte,50
+Usage recommandé (Entraînement/Compétition),Texte,20
