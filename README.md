@@ -1,17 +1,17 @@
 # Shoes-data
 
-1. Règles de gestion
+## 1. Règles de gestion :
 Ces règles décrivent la réalité métier de notre catalogue. Elles permettront à l'étudiant de définir les entités, les associations et les contraintes d'intégrité.
 
-Identité de Marque : Chaque article (chaussure, short ou t-shirt) est produit par une seule marque (ex : Nike, Asics). Une marque peut proposer plusieurs centaines
+__Identité de Marque :__ Chaque article (chaussure, short ou t-shirt) est produit par une seule marque (ex : Nike, Asics). Une marque peut proposer plusieurs centaines
 de références.
 
-Classification des Produits : Un article appartient obligatoirement à une catégorie unique : Chaussure, Short ou T-shirt.
+___Classification des Produits :__ Un article appartient obligatoirement à une catégorie unique : Chaussure, Short ou T-shirt.
 
-Généalogie des Modèles : Un modèle (ex : "Adizero") peut se décliner en plusieurs versions au fil des ans (v1, v2, v3). Chaque version est traitée comme
+__Généalogie des Modèles :__ Un modèle (ex : "Adizero") peut se décliner en plusieurs versions au fil des ans (v1, v2, v3). Chaque version est traitée comme
 une entité distincte car ses caractéristiques techniques évoluent.
 
-Spécificités Chaussures :
+__Spécificités Chaussures :__
 
   Chaque chaussure est définie par son poids, son "drop" (différence de hauteur talon/avant-pied) et le type de mousse utilisé pour l'amorti.
 
@@ -19,7 +19,7 @@ Spécificités Chaussures :
 
   Elle est associée à un type de terrain (Route, Trail, Piste) et à une foulée (Neutre, Pronatrice, Supinatrice).
 
-Spécificités Textile (Shorts et T-shirts) :
+__Spécificités Textile (Shorts et T-shirts) :__
 
   Un vêtement est caractérisé par sa matière principale et sa coupe (Slim, Standard, Relax).
 
@@ -27,14 +27,14 @@ Spécificités Textile (Shorts et T-shirts) :
 
   On doit indiquer la présence de fonctionnalités spécifiques : nombre de poches, détails réfléchissants ou protection UV.
 
-  Gestion des Tailles et Sexes : Chaque produit est conçu pour un sexe spécifique (Homme, Femme, Unisexe) et est disponible dans une gamme de tailles définie
+__Gestion des Tailles et Sexes :__ Chaque produit est conçu pour un sexe spécifique (Homme, Femme, Unisexe) et est disponible dans une gamme de tailles définie
 (numérique pour les chaussures, alphabétique pour le textile).
 
-  Technologies : Une marque utilise souvent des technologies brevetées (ex : Gore-Tex, Dri-FIT, FlyteFoam). Un produit peut intégrer une ou plusieurs de ces technologies.
+__Technologies :__ Une marque utilise souvent des technologies brevetées (ex : Gore-Tex, Dri-FIT, FlyteFoam). Un produit peut intégrer une ou plusieurs de ces technologies.
 
-Tarification : Nous conservons le prix de vente conseillé (PVC) à la sortie ainsi que le prix de vente actuel pratiqué dans notre catalogue.
+__Tarification :__ Nous conservons le prix de vente conseillé (PVC) à la sortie ainsi que le prix de vente actuel pratiqué dans notre catalogue.
 
-2. Dictionnaire de données brutes
+## 2. Dictionnaire de données brutes
 Ce tableau répertorie les données nécessaires sans préjuger de la manière dont elles seront organisées dans les tables finales.
 Nom de la marque	Alphanumérique	50
 Nom du modèle	Alphanumérique	100
