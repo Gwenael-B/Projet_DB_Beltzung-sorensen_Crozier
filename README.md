@@ -36,23 +36,43 @@ __Tarification :__ Nous conservons le prix de vente conseillé (PVC) à la sorti
 
 ## 2. Dictionnaire de données brutes
 Ce tableau répertorie les données nécessaires sans préjuger de la manière dont elles seront organisées dans les tables finales.
+
 Nom de la marque	Alphanumérique	50
+
 Nom du modèle	Alphanumérique	100
+
 Version du produit (ex: v2, 2026)	Alphanumérique	10
+
 Sexe (H, F, U)	Alphanumérique	1
+
 Poids de l'article (en grammes)	Entier	3
+
 Drop de la chaussure (en mm)	Entier	2
+
 Type de semelle (Plaque carbone, mousse)	Alphanumérique	15
+
 Profondeur des crampons (trail)	Décimal	3,1
+
 Surface de prédilection (Route, Trail...)	Alphanumérique	30
+
 Type de foulée	Alphanumérique	20
+
 Distance recommandée (10km, sprint, Marathon)	Alphanumérique	30
+
 Matière textile principale	Alphanumérique	50
+
 Taille (vêtement)	Alphanumérique	20
+
 Nombre de poches	Entier	2
+
 Présence de détails réfléchissants (T-shirt)	Booléen	1
+
 Indice de protection UV (UPF)	Entier	2
+
 Respirabilité (Échelle 1 à 5)	Entier	1
+
 Imperméabilité (Oui/Non)	Booléen	1
+
 Couleur principale	Alphanumérique	30
+
 Prix de vente (€)	Décimal	6,2
