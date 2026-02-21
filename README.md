@@ -72,8 +72,9 @@ Indice de protection UV (UPF)	Entier	2
 Respirabilité (Échelle 1 à 5)	Entier	1
 
 Imperméabilité (Oui/Non)	Booléen	1
-<img width="1431" height="753" alt="image" src="https://github.com/user-attachments/assets/dd67e142-71c5-4cda-8ce9-ae2efca667a6" />
 
 Couleur principale	Alphanumérique	30
 
 Prix de vente (€)	Décimal	6,2
+
+<img width="1431" height="753" alt="image" src="https://github.com/user-attachments/assets/dd67e142-71c5-4cda-8ce9-ae2efca667a6" />
