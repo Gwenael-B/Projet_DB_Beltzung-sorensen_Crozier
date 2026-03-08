@@ -77,6 +77,10 @@ Couleur principale	Alphanumérique	30
 
 Prix de vente (€)	Décimal	6,2
 
+Modèle conceptuel de données :
 <img width="1401" height="718" alt="image" src="https://github.com/user-attachments/assets/1b009aa3-c736-497d-b62b-149c38647421" />
+
+Modèle logique de données :
+<img width="1371" height="740" alt="image" src="https://github.com/user-attachments/assets/c8970d9b-0c44-49f4-ab65-28e572b47feb" />
 
 
