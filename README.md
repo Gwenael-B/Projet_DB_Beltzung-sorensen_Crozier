@@ -83,4 +83,17 @@ Modèle conceptuel de données :
 Modèle logique de données :
 <img width="1371" height="740" alt="image" src="https://github.com/user-attachments/assets/c8970d9b-0c44-49f4-ab65-28e572b47feb" />
 
+Prompt pour la génération de données pour la base de données :
+Donne les requêtes d’insertion permettant de remplir la base de données dont le modèle relationnel est le suivant : 
+•	Marque (Marque_nom) ; Clé primaire : Marque_nom. 
+•	Modèle (Modèle_ID, Version_ID, Modèle_nom, Modèle_marque, Version, #Marque_nom) ; Clé primaire : (Modèle_ID, Version_ID). 
+•	Catégorie (Catégorie_ID, Catégorie_nom, #Parent_Catégorie_ID) ; Clé primaire : Catégorie_ID. 
+•	Produit (Produit_ID, Produit_sexe, Produit_couleur, Produit_prix, Produit_taille, #Modèle_ID, #Version_ID, #Catégorie_ID) ; Clé primaire : Produit_ID. 
+•	Short (Short_ID, Short_indice_UV, Short_nb_poche, Short_matière, #Produit_ID) ; Clé primaire : Short_ID. 
+•	T-shirt (T-shirt_ID, T-shirt_matière, T-shirt_indice_UV, T-shirt_respirabilité, T-shirt_imperméabilité, T-shirt_détails_réfléchissants, #Produit_ID) ; Clé primaire : T-shirt_ID. 
+•	Chaussure (Chaussure_ID, Chaussure_profondeur_crampon, Chaussure_drop, Chaussure_poids, Chaussure_terrain, Chaussure_type_foulée, Chaussure_distance, Chaussure_type_semelle, Chaussure_imperméabilité, #Produit_ID) ; Clé primaire : Chaussure_ID.
+Les clés primaires correspondent aux id, sauf si autre chose est précisé (quand c'est un attribut composé) les clés étrangères sont identifiées par les #, et ont le même nom que les clés primaires auxquelles elles font référence. Quand tu n’as pas les informations pour la profondeur de crampon mets -1, de même pour l’indice UV. Pour le sexe il doit être Homme ou Femme ou Unisexe.
+Génère environ 10 marques de sport réalistes (ex : Nike, Adidas, Salomon, etc.). Génère 20 modèles et au moins 50 produits répartis entre les catégories Short, T-shirt et Chaussure.
+Les clés étrangères doivent faire référence aux clés primaires existantes : donne les lignes en commençant par remplir les tables dans lesquelles il n'y a pas de clés étrangères, puis les tables dans lesquelles les clés étrangères font références à des clés primaires des tables déjà remplies. 
+Fournis l'ensemble sous la forme d’un script SQL prêt à être exécuté.
 
