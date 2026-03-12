@@ -50,4 +50,8 @@ FROM Produit P
 JOIN Modele M ON P.Modele_ID = M.Modele_ID
 WHERE M.Modele_nom = 'Pegasus';
 
---
+
+--Partie 3 : jointures internes, externes, simples, multiples
+
+
+--Partie 4 :  requêtes imbriquées
