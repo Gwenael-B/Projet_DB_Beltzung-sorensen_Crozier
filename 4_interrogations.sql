@@ -52,6 +52,14 @@ WHERE M.Modele_nom = 'Pegasus';
 
 
 --Partie 3 : jointures internes, externes, simples, multiples
+--Détails des différents t-shirt avec leur nom de modèle et leur matière
+SELECT M.Modele_nom, CAT.Categorie_nom, T.T_shirt_matiere
+FROM T_shirt T
+JOIN Produit P ON T.Produit_ID = P.Produit_ID
+JOIN Modele M ON P.Modele_ID = M.Modele_ID
+JOIN Categorie CAT ON P.Categorie_ID = CAT.Categorie_ID;
+
 
 
 --Partie 4 :  requêtes imbriquées
+
